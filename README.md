@@ -12,4 +12,4 @@ NodeJS Application using PassportJS for Authentication. Server rendered applicat
 
 #### Demo App:
 
-[https://auth-app-nodejs.herokuapp.com/]('https://auth-app-nodejs.herokuapp.com/')
+[https://auth-app-nodejs.herokuapp.com/](https://auth-app-nodejs.herokuapp.com/)
