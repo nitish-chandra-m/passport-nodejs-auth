@@ -6,8 +6,13 @@ import mongoose from "mongoose";
 import { keys } from "./config/keys.js";
 import flash from "connect-flash";
 import session from "express-session";
+import passport from "passport";
 
 const app = express();
+
+// Passport config
+import passportConfig from "./config/passport.js";
+passportConfig(passport);
 
 // DB Config
 const db = keys.MongoURI;
@@ -34,6 +39,10 @@ app.use(
   })
 );
 
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Connect flash
 app.use(flash());
 
@@ -41,6 +50,7 @@ app.use(flash());
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
   next();
 });
 
