@@ -1,7 +1,9 @@
-import { Strategy as LocalStrategy } from "passport-local";
+import Strategy from "passport-local";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import User from "../models/User.js";
+
+const LocalStrategy = Strategy;
 
 export default function (passport) {
   passport.use(
