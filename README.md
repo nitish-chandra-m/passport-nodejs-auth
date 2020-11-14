@@ -7,7 +7,8 @@ NodeJS Application using PassportJS for Authentication. Server rendered applicat
 1. Clone the repo
 2. Run
    `npm install`
-3. For the local dev server, run
+3. Set up your keys.js file in the config folder based on the keys_example.js folder. Update the MongoURI key with your connection URI from the MongoDB Atlas console.
+4. For the local dev server, run
    `npm run dev`
 
 #### Demo App:
