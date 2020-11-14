@@ -24,8 +24,8 @@ mongoose
   .catch((err) => console.log(error));
 
 // EJS
-app.use(expressLayouts);
 app.set("view engine", "ejs");
+app.use(expressLayouts);
 
 // Bodyparser
 app.use(express.urlencoded({ extended: false }));
